@@ -48,7 +48,7 @@ message NftWithdrawal {
 
 fun sendNft(nftAddress: Address, queryId: Int, destination: Address) {
     send(SendParameters{to: nftAddress,
-            value: v,
+            value: 0,
             bounce: true,
             mode: SendRemainingValue + SendIgnoreErrors,
             body: Transfer{queryId: queryId,
